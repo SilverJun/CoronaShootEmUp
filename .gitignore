@@ -17,3 +17,7 @@
 
 *.log
 .vs/
+*.pdb
+*.idb
+*.ilk
+*.tlog
