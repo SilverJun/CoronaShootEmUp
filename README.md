@@ -8,11 +8,12 @@
   * For studing game libraries
 
 ## TO-DO
-[x] Implement basic functions
-[ ] Implement explosion animation
-[ ] Implement BGM and Sound FX
-[ ] Implement bomb
-[ ] Implement enemy spawn pattern
-[ ] Implement boss
-[ ] Implement basic menu scenes
-[ ] Implement endless stage
+* [x] Implement basic functions
+* [ ] Implement explosion animation
+* [ ] Implement BGM and Sound FX
+* [ ] Implement bomb
+* [ ] Implement enemy spawn pattern
+* [ ] Implement boss
+* [ ] Implement basic menu scenes
+* [ ] Implement endless stage
+
