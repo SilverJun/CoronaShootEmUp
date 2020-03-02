@@ -1,2 +1,5 @@
-# CoronaShootEmUp
-2020 Wuhan corona virus (COVID-19) shooting game made with SFML
+# CoronaShoot'em Up
+2020 coronavirus shooting game made with SFML
+
+* Naive implementation with SFML and C++
+* Just for programming study (not for fun)
