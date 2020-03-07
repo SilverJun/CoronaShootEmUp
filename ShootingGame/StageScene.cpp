@@ -1,6 +1,7 @@
 #include "StageScene.h"
 #include "Player.h"
 #include "CoronaVirus.h"
+#include "SoundManager.h"
 
 StageScene::StageScene(sf::RenderWindow& window) : Scene(window), mSpawnInterval(sf::seconds(1.0)), mCoronaDie(0)
 {
@@ -19,6 +20,8 @@ StageScene::~StageScene()
 
 void StageScene::Init()
 {
+	SoundManager::GetInstance()->PlaySound(eSound::StageBG);
+	
 	SetBackground(R"(..\Assets\Sprite\background.jpg)");
 	
 	AddGameObject(new Player());
@@ -77,6 +80,7 @@ void StageScene::Update()
 		{
 			if (CollisionCheck(collisionMatrix[2][i], collisionMatrix[3][j]))
 			{
+				SoundManager::GetInstance()->PlaySound(eSound::Explosion);
 				mCoronaDie++;
 				collisionMatrix[2][i]->OnCollide(collisionMatrix[3][j]);
 				collisionMatrix[3][j]->OnCollide(collisionMatrix[2][i]);
@@ -115,6 +119,8 @@ void StageScene::Render()
 
 void StageScene::Release()
 {
+	SoundManager::GetInstance()->StopSound(eSound::StageBG);
+	
 	for (int i = 0; i < mObjList.size(); ++i)
 	{
 		mObjList[i]->Release();

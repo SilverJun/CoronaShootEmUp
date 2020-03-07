@@ -2,6 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include "Scene.h"
+#include "SoundManager.h"
 
 Player::Player() : GameObject(R"(..\Assets\Sprite\player.png)"), mShootInterval(0.2)
 {
@@ -54,6 +55,7 @@ void Player::Update()
 		// ÃÑ¾Ë »ý¼º...
 		//mBullets.push_back(Bullet(mSprite.getPosition()));
 		mShootClock.restart();
+		SoundManager::GetInstance()->PlaySound(eSound::Fire);
 		Scene::GetCurrentScene()->AddGameObject(new Bullet(mSprite.getPosition()));
 	}
 }

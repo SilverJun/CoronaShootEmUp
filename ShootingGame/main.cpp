@@ -5,6 +5,7 @@
 #include "Bullet.h"
 #include "Scene.h"
 #include "StageScene.h"
+#include "SoundManager.h"
 
 int main()
 {
@@ -16,6 +17,7 @@ int main()
 
 	//Player player;
 	//CoronaVirus corona;
+	SoundManager::GetInstance()->Init();
 	Scene::SceneChange(new StageScene(window));
 	Scene* currentScene = Scene::GetCurrentScene();
 	
