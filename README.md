@@ -10,7 +10,7 @@
 ## TO-DO
 * [x] Implement basic functions
 * [ ] Implement explosion animation
-* [ ] Implement BGM and Sound FX
+* [x] Implement BGM and Sound FX
 * [ ] Implement bomb
 * [ ] Implement enemy spawn pattern
 * [ ] Implement boss
