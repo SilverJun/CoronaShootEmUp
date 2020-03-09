@@ -14,6 +14,6 @@
 * [ ] Implement bomb
 * [ ] Implement enemy spawn pattern
 * [ ] Implement boss
-* [ ] Implement basic menu scenes
+* [x] Implement basic menu scenes
 * [ ] Implement endless stage
 
