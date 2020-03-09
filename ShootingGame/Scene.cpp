@@ -1,9 +1,11 @@
 #include "Scene.h"
 
 Scene* Scene::mCurrentScene = nullptr;
+sf::Font Scene::mFont;
 
 Scene::Scene(sf::RenderWindow& window) : mWindow(window)
 {
+	mFont.loadFromFile(R"(..\Assets\Font\½ºÇÃ·¡2K.ttf)");
 }
 
 Scene::~Scene()

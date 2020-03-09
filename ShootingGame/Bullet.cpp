@@ -26,7 +26,9 @@ void Bullet::Update()
 void Bullet::Render(sf::RenderWindow& window)
 {
 	GameObject::Render(window);
+#ifdef _DEBUG
 	RenderBoundingBox(window);
+#endif
 }
 
 void Bullet::OnCollide(GameObject* other)

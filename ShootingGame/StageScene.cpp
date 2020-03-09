@@ -5,8 +5,6 @@
 
 StageScene::StageScene(sf::RenderWindow& window) : Scene(window), mSpawnInterval(sf::seconds(1.0)), mCoronaDie(0)
 {
-	mFont.loadFromFile(R"(..\Assets\Font\½ºÇÃ·¡2K.ttf)");
-	
 	mUICoronaDie.setFont(mFont);
 	mUICoronaDie.setPosition(50, 50);
 	mUICoronaDie.setFillColor(sf::Color::White);

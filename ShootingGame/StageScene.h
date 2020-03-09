@@ -6,7 +6,6 @@ class StageScene :
 {
 	sf::Time mSpawnInterval;
 	sf::Clock mSpawnTimer;
-	sf::Font mFont;
 	sf::Text mUICoronaDie;
 	int mCoronaDie;
 

@@ -56,14 +56,16 @@ void Player::Update()
 		//mBullets.push_back(Bullet(mSprite.getPosition()));
 		mShootClock.restart();
 		SoundManager::GetInstance()->PlaySound(eSound::Fire);
-		Scene::GetCurrentScene()->AddGameObject(new Bullet(mSprite.getPosition()));
+		(*Scene::GetCurrentScene())->AddGameObject(new Bullet(mSprite.getPosition()));
 	}
 }
 
 void Player::Render(sf::RenderWindow & window)
 {
 	GameObject::Render(window);
+#ifdef _DEBUG
 	RenderBoundingBox(window);
+#endif
 }
 
 void Player::OnCollide(GameObject* other)

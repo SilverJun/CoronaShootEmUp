@@ -10,6 +10,7 @@ protected:
 	std::vector<GameObject*> mObjList;
 	sf::Texture mBGTexture;
 	sf::Sprite mBackground;
+	static sf::Font mFont;
 	
 public:
 	Scene(sf::RenderWindow& window);
@@ -25,6 +26,6 @@ public:
 	bool CollisionCheck(GameObject* box1, GameObject* box2);
 
 	static void SceneChange(Scene* newScene);
-	static Scene* GetCurrentScene() { return mCurrentScene; }
+	static Scene** GetCurrentScene() { return &mCurrentScene; }
 };
 

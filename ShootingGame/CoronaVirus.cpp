@@ -1,5 +1,6 @@
 #include "CoronaVirus.h"
 #include <random>
+#include <time.h>
 
 CoronaVirus::CoronaVirus() : GameObject(R"(..\Assets\Sprite\corona.png)")
 {
@@ -27,7 +28,9 @@ void CoronaVirus::Update()
 void CoronaVirus::Render(sf::RenderWindow& window)
 {
 	GameObject::Render(window);
+#ifdef _DEBUG
 	RenderBoundingBox(window);
+#endif
 }
 
 void CoronaVirus::OnCollide(GameObject* other)

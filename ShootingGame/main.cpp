@@ -6,6 +6,7 @@
 #include "Scene.h"
 #include "StageScene.h"
 #include "SoundManager.h"
+#include "MenuScene.h"
 
 int main()
 {
@@ -18,8 +19,8 @@ int main()
 	//Player player;
 	//CoronaVirus corona;
 	SoundManager::GetInstance()->Init();
-	Scene::SceneChange(new StageScene(window));
-	Scene* currentScene = Scene::GetCurrentScene();
+	Scene::SceneChange(new MenuScene(window));
+	Scene** currentScene = Scene::GetCurrentScene();
 	
 	// run the program as long as the window is open
 	while (window.isOpen())
@@ -33,7 +34,7 @@ int main()
 				window.close();
 		}
 		//player.Update();
-		currentScene->Update();
+		(*currentScene)->Update();
 		
 		// clear the window with black color
 		window.clear(sf::Color::Black);
@@ -42,7 +43,7 @@ int main()
 		//player.Render(window);
 		//corona.Render(window);
 
-		currentScene->Render();
+		(*currentScene)->Render();
 		
 		// end the current frame
 		window.display();

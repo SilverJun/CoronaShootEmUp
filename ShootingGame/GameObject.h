@@ -1,8 +1,11 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <unordered_map>
 
 class GameObject
 {
+	static std::unordered_map<std::string, sf::Texture*> resMap;
+	
 protected:
 	sf::Texture mTexture;
 	sf::Sprite mSprite;
